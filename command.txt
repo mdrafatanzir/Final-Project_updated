@@ -1,0 +1,9 @@
+1. scp "E:/Abo Akademi University-Master Program/First Academic Year 2024-2025/4. Fourth Period/Paralell Computing/Final Project/Cuda Version/ann_cuda.cu" mrafath@dione.utu.fi:/home/mrafath/
+2. scp "E:/Abo Akademi University-Master Program/First Academic Year 2024-2025/4. Fourth Period/Paralell Computing/Final Project/Cuda Version/NIR_Data.csv" mrafath@dione.utu.fi:/home/mrafath/
+3. ssh mrafath@dione.utu.fi
+4. module list
+5. module load cuda
+6. which nvcc
+7. nvcc -O3 -arch=sm_70 -std=c++11 -o ann_cuda ann_cuda.cu
+8.srun -p gpu -n 1 -t 10:00 --mem=2G -e err.txt -o out.txt ./ann_cuda --data NIR_Data.dat --epochs 10 --batch 128 --lr 0.01
+
